@@ -5,6 +5,12 @@ grep_string() {
     strings -a -t x $1 | grep $2
 }
 
+grep_symbol() {
+    # $1: binary
+    # $2: pattern
+    readelf -a -s $1 | grep $2
+}
+
 serve_binary() {
     # $1: binary
     # $2: port
