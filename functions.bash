@@ -7,7 +7,7 @@ grep_string() {
 serve_binary() {
     # $1: binary
     # $2: port
-    if [-z $2]; then
+    if [ -z $2 ]; then
         echo "Using port 5000"
         $2=5000
     fi
